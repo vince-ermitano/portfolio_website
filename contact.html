@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | Vince Ermitano</title>
+    <script type="module" src="./assets/js/contact.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('g_pCeElPc632TK0As');
+        })();
+    </script>
+    <link rel="stylesheet" href="./assets/css/myStyle.css" media="screen" type="text/css">
+    <script src="https://kit.fontawesome.com/8cc61868ab.js" crossorigin="anonymous" defer></script>
+    <link rel="icon" href="./assets/images/icons8-contact-16.png">
+
+    <style>
+        main {
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        main h1 {
+            display: inline-block;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            font-size: 2.25rem;
+            border-radius: 1rem;
+            background-color: white;
+        }
+
+        main h1 img {
+            display: inline-block;
+            height: 2.25rem;
+            vertical-align: middle;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        input {
+            width: 30%;
+        }
+
+        textarea {
+            width: 30%;
+        }
+
+        button {
+            padding: 0.5rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            border-width: 0px;
+            transition: var(--ease-in-transition);
+        }
+
+        button:hover {
+            background-color: var(--bright-coral);
+            transform: scale(1.1);
+            color: white;
+        }
+
+        main {
+            padding-bottom: 12rem;
+        }
+
+        @media only screen and (max-width: 480px) {
+            input, textarea {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <figure>
+            <a href="index.html">
+                <img src="./assets/images/small-prof-pic.png" alt="Image of logo (click to go to homepage)" width="30">
+                <span>Vince Ermitano</span>
+            </a> 
+        </figure>
+
+        <nav class="desktop">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" title="Go to Projects Page">Projects</a></li>
+                <li class="forHW2"><a href="experimental.html" title="Go to Experimental Page">Experimental</a></li>
+                <li><a href="about.html" title="Go to About Page">About Me</a></li>
+                <li><a href="contact.html" title="Go to Contact Page">Contact</a></li>
+                <li><a href="nativedialogs.html" title="Go to Native Dialogs Page">Native Dialogs</a></li>
+                <li><a href="customdialogs.html" title="Go to Custom Dialogs Page">Custom Dialogs</a></li>
+                <li><a href="crud.html" title="Go to Simple CRUD Page">Simple CRUD</a></li>
+                <li><a href="styledcrud.html" title="Go to Styled CRUD Page">Styled CRUD</a></li>
+            </ul>
+        </nav>
+
+        <nav class="nav-mobile">
+            <!-- <input type="checkbox" name="" id="check" /> -->
+            <div id="menu">
+                <div id=bar1 class="bar"></div>
+                <div id=bar2 class="bar"></div>
+                <div id=bar3 class="bar"></div>
+            </div>
+            <!-- <div class="menu-bg">
+                <ul>
+                    <li><a href="index.html" title="Go to Homepage">Home</a></li>
+                    <li><a href="projects.html" title="Go to Projects Page">Projects</a></li>
+                    <li><a href="about.html" title="Go to About Page">About Me</a></li>
+                    <li><a href="contact.html" title="Go to Contact Page">Contact</a></li>
+                </ul>
+            </div> -->
+        </nav>
+    </header>
+    
+    <!-- Update with hamburger menu in JS iteration -->
+    <div id="menu-no-animation">
+        <ul>
+            <li><a href="index.html" title="Go to Homepage">Home</a></li>
+            <li><a href="projects.html" title="Go to Projects Page">Projects</a></li>
+            <li><a href="about.html" title="Go to About Page">About Me</a></li>
+            <li><a href="contact.html" title="Go to Contact Page">Contact</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <h1>Get in Touch! <span><img src="./assets/images/telegram-app-shake.gif" alt="Icon of a mailbox"></span></h1>
+        <form id="contactForm">
+            <div id="nameInputSection">
+                <label for="fullnameFld"><strong>Full Name</strong></label>
+                <br />
+                <input type="text" maxlength="40" name="fullnameFld" id="fullnameFld" required autofocus>
+            </div>
+            <br />
+            <div id="emailInputSection">
+                <label for="emailFld"><strong>Email</strong></label>
+                <br />
+                <input type="email" name="emailFld" id="emailFld" required maxlength="64">
+            </div>
+            <br />
+            <div id="messageInputSection">
+                <label for="message"><b>Your Message</b></label>
+                <br />
+                <textarea id="message" name="message" rows="10" cols="50" placeholder="Enter here" required maxlength="32000"></textarea>
+            </div>
+        </form>
+        <br />
+        <button type="submit" form="contactForm">Send Message</button>
+
+        <dialog id="success-dialog">
+            <h2>Your message has been sent!</h2>
+            <p>I will try to respond as soon as possible!</p>
+        </dialog>
+        <dialog id="fail-dialog">
+            <h2>There was an error sending your message...</h2>
+            <p>Please try again</p>
+        </dialog>
+    </main>
+
+    <hr />
+
+    <footer>
+        <icon-group>
+            <i class="fa-brands fa-github" onclick="window.open('https://github.com/','_blank')"></i>
+            <i class="fa-brands fa-linkedin" onclick="window.open('https://github.com/','_blank')"></i>
+            <!-- <a href="https://github.com/vince-ermitano" target="_blank" title="Go to Vince's Github"><img src="./assets/images/github-png-icon-free-download-813498.png" alt="Link to Vince's Github" width="25"></a>
+            <a href="https://www.linkedin.com/in/vince-ermitano-014992223/" target="_blank" title="Go to Vince's LinkedIn"><img src="./assets/images/linkedin-icon.png" alt="Link to Vince's LinkedIn" width="25"></a> -->
+        </icon-group>
+    </footer>
+</body>
+</html>

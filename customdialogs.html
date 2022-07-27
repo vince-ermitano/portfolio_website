@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Dialogs</title>
+    <link rel="stylesheet" href="./assets/css/myStyle.css" media="screen" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.10/purify.min.js"></script>
+    <script type="module" src="./customdialog.js"></script>
+
+    <style>
+        input {
+            display: block;
+            margin: 1rem;
+        }
+
+        input:invalid {
+            background-color: red;
+        }
+
+        input:valid {
+            background-color: greenyellow;
+        }
+
+        main {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <figure>
+            <a href="index.html">
+                <img src="./assets/images/small-prof-pic.png" alt="Image of logo (click to go to homepage)" width="30">
+                <span>Vince Ermitano</span>
+            </a> 
+        </figure>
+
+        <nav class="desktop">
+            <ul>
+                <li><a href="index.html" title="Go to Homepage">Home</a></li>
+                <li><a href="projects.html" title="Go to Projects Page">Projects</a></li>
+                <li class="forHW2"><a href="experimental.html" title="Go to Experimental Page">Experimental</a></li>
+                <li><a href="about.html" title="Go to About Page">About Me</a></li>
+                <li><a href="contact.html" title="Go to Contact Page">Contact</a></li>
+                <li><a href="nativedialogs.html" title="Go to Native Dialogs Page">Native Dialogs</a></li>
+                <li><a href="customdialogs.html" title="Go to Custom Dialogs Page">Custom Dialogs</a></li>
+                <li><a href="crud.html" title="Go to Simple CRUD Page">Simple CRUD</a></li>
+                <li><a href="styledcrud.html" title="Go to Styled CRUD Page">Styled CRUD</a></li>
+            </ul>
+        </nav>
+
+        <nav class="nav-mobile">
+            <!-- <input type="checkbox" name="" id="check" /> -->
+            <div id="menu">
+                <div id=bar1 class="bar"></div>
+                <div id=bar2 class="bar"></div>
+                <div id=bar3 class="bar"></div>
+            </div>
+            <!-- <div class="menu-bg">
+                <ul>
+                    <li><a href="index.html" title="Go to Homepage">Home</a></li>
+                    <li><a href="projects.html" title="Go to Projects Page">Projects</a></li>
+                    <li><a href="about.html" title="Go to About Page">About Me</a></li>
+                    <li><a href="contact.html" title="Go to Contact Page">Contact</a></li>
+                </ul>
+            </div> -->
+        </nav>
+    </header>
+    
+    <!-- Update with hamburger menu in JS iteration -->
+    <div id="menu-no-animation">
+        <ul>
+            <li><a href="index.html" title="Go to Homepage">Home</a></li>
+            <li><a href="projects.html" title="Go to Projects Page">Projects</a></li>
+            <li><a href="about.html" title="Go to About Page">About Me</a></li>
+            <li><a href="contact.html" title="Go to Contact Page">Contact</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <button type="button" id="open-dialog-button">Click here to open custom dialog</button>
+        <dialog>
+            <form id="myForm" method="get">
+                <label for="nameFld">Name</label>
+                <input type="text" name="nameFld" id="nameFld" maxlength="50" required>
+                <label for="pidFld">PID (must actually be in UCSD form to validate!)</label>
+                <input type="text" name="pidFld" id="pidFld" pattern="^[a-zA-Z][0-9]{8}$" required>
+                <label for="ssnFld">SSN (any number will do)</label>
+                <input type="number" name="ssnFld" id="ssnFld" required>
+                <label for="ccFld">Credit Card # (any number will do)</label>
+                <input type="number" name="ccFld" id="ccFld" required>
+            </form>
+            <button id="cancel-button" type="button">Cancel Form</button>
+            <button id="send-button" type="submit" form="myForm">Send Form</button>
+        </dialog>
+    
+        <pre></pre>
+    </main>
+
+    <footer>
+        <icon-group>
+            <a href="https://github.com/vince-ermitano" target="_blank" title="Go to Vince's Github"><img src="./assets/images/github-png-icon-free-download-813498.png" alt="Link to Vince's Github" width="25"></a>
+            <a href="https://www.linkedin.com/in/vince-ermitano-014992223/" target="_blank" title="Go to Vince's LinkedIn"><img src="./assets/images/linkedin-icon.png" alt="Link to Vince's LinkedIn" width="25"></a>
+        </icon-group>
+    </footer>
+</body>
+</html>

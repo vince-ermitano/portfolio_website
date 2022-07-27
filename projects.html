@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Vince Ermitano</title>
+    <link rel="stylesheet" href="./assets/css/myStyle.css" media="screen" type="text/css">
+    <script src="https://kit.fontawesome.com/8cc61868ab.js" crossorigin="anonymous" defer></script>
+    <link rel="icon" href="./assets/images/icons8-source-code-16.png">
+
+    <style>
+        main {
+            padding: 1rem;
+        }
+
+        h1 {
+            font-size: 2.75rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        h2 {
+            padding-left: 3rem;
+        }
+
+        span img{
+            display:inline-block;
+            height: 2.75rem;
+            vertical-align: middle;
+        }
+        project-title {
+            display: flex;
+            font-size: 2.75rem;
+        }
+
+        projects-group {
+            display: grid;
+            grid-template: 1fr / repeat(3, 1fr);
+            gap: 1rem;
+            justify-items: center;
+            margin: 2rem 0;
+        }
+
+        project-item {
+            text-align: center;
+            width: 80%;
+            background-color: var(--golden);
+            border-radius: 5%;
+            transition: var(--ease-in-transition);
+        }
+
+        project-item:hover {
+            background-color: rgba(249, 142, 2, 0.2);
+        }
+
+        project-item img {
+            display:block;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        project-item figure {
+            text-align: center;
+            height: 300px;
+            /* border: 1px dotted black; */
+            overflow: hidden;
+        }
+
+        project-item figure img {
+            object-fit: contain;
+            height: 80%;
+        }
+
+        figcaption {
+            line-height: 2;
+        }
+
+        button {
+            padding: 0.5rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            border-width: 0px;
+            transition: var(--ease-in-transition);
+            margin-bottom: 1rem;
+        }
+
+        button:hover {
+            background-color: var(--bright-coral);
+            transform: scale(1.1);
+            color: white;
+        }
+
+        /* project-item div {
+            width: 100%;
+            height: 80%;
+        } */
+
+        /* Media Queries */
+        @media only screen and (max-width: 820px) {
+            projects-group {
+                grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+            }
+
+            projects-group {
+                grid-template: 1fr / repeat(2, 1fr);
+            }
+
+            project-item {
+                width: 90%;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            section h2{
+                text-align: center;
+                padding: 0;
+                margin: 3rem 0;
+            }
+
+            project-item {
+                width: 85%;
+            }
+            projects-group {
+                grid-template: repeat(3, 1fr) / 1fr;
+            }
+
+            projects-group:nth-child(2) {
+                grid-template: repeat(2, 1fr) / 1fr;
+            }
+
+            project-item figure {
+                text-align: center;
+                height: 200px;
+                /* border: 1px dotted black; */
+            }
+
+            project-item figure img {
+                object-fit: contain;
+                height: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+        <figure>
+            <a href="index.html">
+                <img src="./assets/images/small-prof-pic.png" alt="Image of logo (click to go to homepage)" width="30">
+                <span>Vince Ermitano</span>
+            </a> 
+        </figure>
+
+        <nav class="desktop">
+            <ul>
+                <li><a href="index.html" title="Go to Homepage">Home</a></li>
+                <li><a href="projects.html" title="Go to Projects Page">Projects</a></li>
+                <li class="forHW2"><a href="experimental.html" title="Go to Experimental Page">Experimental</a></li>
+                <li><a href="about.html" title="Go to About Page">About Me</a></li>
+                <li><a href="contact.html" title="Go to Contact Page">Contact</a></li>
+                <li><a href="nativedialogs.html" title="Go to Native Dialogs Page">Native Dialogs</a></li>
+                <li><a href="customdialogs.html" title="Go to Custom Dialogs Page">Custom Dialogs</a></li>
+                <li><a href="crud.html" title="Go to Simple CRUD Page">Simple CRUD</a></li>
+                <li><a href="styledcrud.html" title="Go to Styled CRUD Page">Styled CRUD</a></li>
+            </ul>
+        </nav>
+
+        <nav class="nav-mobile">
+            <!-- <input type="checkbox" name="" id="check" /> -->
+            <div id="menu">
+                <div id=bar1 class="bar"></div>
+                <div id=bar2 class="bar"></div>
+                <div id=bar3 class="bar"></div>
+            </div>
+            <!-- <ul id="test">
+                <li><a href="index.html" title="Go to Homepage">Home</a></li>
+                <li><a href="projects.html" title="Go to Projects Page">Projects</a></li>
+                <li><a href="about.html" title="Go to About Page">About Me</a></li>
+                <li><a href="contact.html" title="Go to Contact Page">Contact</a></li>
+            </ul> -->
+            <!-- <div class="menu-bg">
+                <ul>
+                    <li><a href="index.html" title="Go to Homepage">Home</a></li>
+                    <li><a href="projects.html" title="Go to Projects Page">Projects</a></li>
+                    <li><a href="about.html" title="Go to About Page">About Me</a></li>
+                    <li><a href="contact.html" title="Go to Contact Page">Contact</a></li>
+                </ul>
+            </div> -->
+        </nav>
+    </header>
+    
+    <div id="menu-no-animation">
+        <ul>
+            <li><a href="index.html" title="Go to Homepage">Home</a></li>
+            <li><a href="projects.html" title="Go to Projects Page">Projects</a></li>
+            <li><a href="about.html" title="Go to About Page">About Me</a></li>
+            <li><a href="contact.html" title="Go to Contact Page">Contact</a></li>
+        </ul>
+    </div>
+
+    
+    <main>
+        <project-title>
+            <h1>Projects
+                <span>
+                    <img src="./assets/images/icons8-source-code-96.png" alt="">
+                </span>
+            </h1>
+        </project-title>
+        <section>
+            <h2>Completed</h2>
+            <projects-group>
+                <project-item>
+                    <figure>
+                        <img src="./assets/images/faq-can-i-make-friends1.jpg" alt="preview image of project" width="300">
+                        <figcaption>UCSD Find Classmates App</figcaption>
+                    </figure>
+                    <button type="button" onclick="window.open('https://github.com/CSE-110-Winter-2022/birds-of-a-feather-team-24','_blank')">See Github</button>
+                </project-item>
+                <project-item>
+                    <figure>
+                        <img src="./assets/images/concurrency.webp" alt="preview image of project" width="300">
+                        <figcaption>Implementation of Processes and Threads in Single CPU System</figcaption>
+                    </figure>
+                  <button type="button" onclick="window.open('https://github.com/UCSD-CSE120-SP22/nachos_sp22_JawadOsman_kirtan-shah_vince-ermitano.git','_blank')">See Github</button>
+                </project-item>
+                <project-item>
+                    <figure>
+                        <img src="./assets/images/encryption.webp" alt="preview image of project" width="300">
+                        <figcaption>Encryption / Decryption in SysVerilog</figcaption>
+                    </figure>
+                    <button type="button" onclick="window.open('https://github.com/CSE-110-Winter-2022/birds-of-a-feather-team-24','_blank')">See Github</button>
+                </project-item>
+            </projects-group>
+        </section>
+    
+        <section>
+            <h2>In Progress</h2>
+            <projects-group id="inProgress">
+                <project-item>
+                    <figure>
+                        <img src="./assets/images/spotify.png" alt="preview image of project">
+                        <figcaption>Spotify Quiz Game</figcaption>
+                    </figure>
+                    <button type="button" onclick="window.open('https://github.com/vince-ermitano/spotify-guess-song','_blank')">See Github</button>
+                </project-item>
+                <project-item>
+                    <figure>
+                        <img src="./assets/images/portfolio-man.png" alt="preview image of project">
+                        <figcaption>Portfolio Website</figcaption>
+                    </figure>
+                    <button type="button" onclick="window.open('https://github.com/CSE-110-Winter-2022/porfolio-website-hw4','_blank')">See Github</button>
+                </project-item>
+            </projects-group>
+        </section>
+    
+        <hr />
+    </main>
+
+    <footer>
+        <icon-group>
+            <i class="fa-brands fa-github" onclick="window.open('https://github.com/','_blank')"></i>
+            <i class="fa-brands fa-linkedin" onclick="window.open('https://github.com/','_blank')"></i>
+            <!-- <a href="https://github.com/vince-ermitano" target="_blank" title="Go to Vince's Github"><img src="./assets/images/github-png-icon-free-download-813498.png" alt="Link to Vince's Github" width="25"></a>
+            <a href="https://www.linkedin.com/in/vince-ermitano-014992223/" target="_blank" title="Go to Vince's LinkedIn"><img src="./assets/images/linkedin-icon.png" alt="Link to Vince's LinkedIn" width="25"></a> -->
+        </icon-group>
+    </footer>
+</body>
+</html>

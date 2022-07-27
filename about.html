@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Vince Ermitano</title>
+    <link rel="stylesheet" href="./assets/css/myStyle.css" media="screen" type="text/css">
+    <script src="https://kit.fontawesome.com/8cc61868ab.js" crossorigin="anonymous" defer></script>
+    <link rel="icon" href="./assets/images/icons8-about-me-male-32.png">
+
+    <style>
+        /* General styles */
+        main section {
+            display: grid;
+            grid-template: 1fr / 1fr 1fr;
+            padding: 2rem 1rem;
+        }
+
+        section {
+            justify-content: center;
+        }
+
+        section div * {
+            margin: 1rem;
+        }
+
+        section > div {
+            width: 80%;
+            justify-self: center;
+        }
+
+        section > div {
+            align-self: center;
+        }
+
+        h1 {
+            display: inline-block;
+            font-size: 2.25rem;
+            background-color: white;
+            border-radius: 1rem 2rem;
+            padding: 0.5rem 1rem;
+        }
+
+        h2 {
+            display: inline-block;
+            font-size: 1.75rem;
+            background-color: white;
+            border-radius: 1rem 2rem;
+            padding: 0.5rem 1rem;
+        }
+
+        section figure {
+            text-align: center;
+            align-self: center;
+            justify-self: center;
+            width: 80%;
+        }
+
+        hr {
+            display: none;
+        }
+
+        p {
+            font-size: 1.25rem;
+        }
+
+        main img {
+            border-radius: 5%;
+        }
+
+        .flipped > div {
+            grid-row: 1 / 1;
+            grid-column: 2 / 2;
+        }
+
+        .flipped > figure {
+            grid-row: 1 / 1;
+            grid-column: 1 / 1;
+        }
+
+        .skinny {
+            width: 50%;
+        }
+
+        /* Intro section */
+        #intro h1 img {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0;
+        }
+
+        #intro div {
+            text-align: start;
+        }
+
+        #intro div, #intro figure{
+            width: 80%;
+            align-self: center;
+        }
+
+        #intro figure {
+            text-align: center;
+            justify-self: center;
+        }
+
+        #intro figure img {
+            border-radius: 50%;
+        }
+
+        /* Technologies section */
+        #technologies {
+            align-items: center;
+        }
+
+        #technologies div.lists {
+            display: grid;
+            grid-template: 1fr / 1fr 1fr;
+        }
+
+        div.lists, main ul {
+            margin: 0;
+        }
+
+        /* Experience section */
+        #experience-section figure{
+            text-align: left;
+        }
+
+        #experience-section div{
+            text-align: center;
+        }
+
+        #experience-section div {
+            /* width: 50%; */
+        }
+
+        /* Goals section */
+        .flipped > div {
+            grid-row: 1 / 1;
+            grid-column: 2 / 2;
+        }
+
+        .flipped > figure {
+            grid-row: 1 / 1;
+            grid-column: 1 / 1;
+        }
+
+        /* Hobbies section */
+        #hobbies-section figure {
+            text-align: left;
+        }
+
+        #hobbies-section div {
+            text-align: center;
+        }
+
+        /* Media Queries */
+        @media only screen and (max-width: 820px) {
+            #technologies {
+                grid-template: 1fr / 1fr 1fr;
+            }
+
+            section figure {
+                align-self: center;
+            }
+            section figure img{
+                width: 100%;
+            }
+
+            #goals-and-interests h2, #goals-and-interests p {
+                margin: 1rem 0;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            main section {
+                display: grid;
+                grid-template: 1fr 1fr / 1fr;
+                padding: 1rem;
+            }
+
+            #intro h1 img {
+                display: inline-block;
+                margin: 0;
+            }
+
+            #intro div {
+                text-align: center;
+            }
+            
+
+            main section, main div {
+                text-align: center;
+                align-self: center;
+            }
+
+            section figure, section > div {
+                text-align: center;
+                justify-self: center;
+                width: 90%;
+            }
+
+            section div > p {
+                text-align: center;
+                margin: 0;
+            }
+
+            main figure {
+                display: flex;
+            }
+
+            img {
+                max-width: 100%;
+                object-fit: cover;
+            }
+
+            section > div {
+                grid-row: 2 / 2;
+            }
+
+            .flipped > div {
+                grid-row: 2 / 2;
+                grid-column: 1 / 1;
+            }
+            
+            .flipped > figure {
+                grid-row: 1 / 1;
+                grid-column: 1 / 1;
+            }
+
+            #hobbies-section div {
+                align-self: flex-start;
+                text-align: center;
+            }
+
+            section#technologies.flipped{
+                justify-self: center;
+                text-align: center;
+                /* width: 100%; */
+                grid-template: 1fr 1fr / 1fr;
+            }
+
+            .skinny {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <figure>
+            <a href="index.html">
+                <img src="./assets/images/small-prof-pic.png" alt="Image of logo (click to go to homepage)" width="30">
+            </a> 
+        </figure>
+
+        <nav class="desktop">
+            <ul>
+                <li><a href="index.html" title="Go to Homepage">Home</a></li>
+                <li><a href="projects.html" title="Go to Projects Page">Projects</a></li>
+                <li class="forHW2"><a href="experimental.html" title="Go to Experimental Page">Experimental</a></li>
+                <li><a href="about.html" title="Go to About Page">About Me</a></li>
+                <li><a href="contact.html" title="Go to Contact Page">Contact</a></li>
+                <li><a href="nativedialogs.html" title="Go to Native Dialogs Page">Native Dialogs</a></li>
+                <li><a href="customdialogs.html" title="Go to Custom Dialogs Page">Custom Dialogs</a></li>
+                <li><a href="crud.html" title="Go to Simple CRUD Page">Simple CRUD</a></li>
+                <li><a href="styledcrud.html" title="Go to Styled CRUD Page">Styled CRUD</a></li>
+            </ul>
+        </nav>
+
+        <nav class="nav-mobile">
+            <!-- <input type="checkbox" name="" id="check" /> -->
+            <div id="menu">
+                <div id=bar1 class="bar"></div>
+                <div id=bar2 class="bar"></div>
+                <div id=bar3 class="bar"></div>
+            </div>
+            <!-- <div class="menu-bg">
+                <ul>
+                    <li><a href="index.html" title="Go to Homepage">Home</a></li>
+                    <li><a href="projects.html" title="Go to Projects Page">Projects</a></li>
+                    <li><a href="about.html" title="Go to About Page">About Me</a></li>
+                    <li><a href="contact.html" title="Go to Contact Page">Contact</a></li>
+                </ul>
+            </div> -->
+        </nav>
+
+    </header>
+
+    <!-- Update with hamburger menu in JS iteration -->
+    <div id="menu-no-animation">
+        <ul>
+            <li><a href="index.html" title="Go to Homepage">Home</a></li>
+            <li><a href="projects.html" title="Go to Projects Page">Projects</a></li>
+            <li><a href="about.html" title="Go to About Page">About Me</a></li>
+            <li><a href="contact.html" title="Go to Contact Page">Contact</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <section id="intro">
+            <div>
+                <h1>About Me<span><img src="./assets/images/icons8-customer-64.png" alt=""></span></h1>
+                <p>I am a 4th year student at UC San Diego studying Computer Science
+                    with interests in pursuing web development. I hope you enjoy your
+                    stay as your explore through my portfolio site! Feel free to contact
+                    me for any inquiries!
+                </p>
+            </div>
+            <figure>
+                <img src="./assets/images/about-img1.webp" alt="Image of Vince Ermitano" width="300">
+            </figure>
+        </section>
+
+        <section id="technologies" class="flipped">
+            <div>
+                <h2>Technologies I've Used</h2>
+                <div class="lists">
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Javascript</li>
+                        <li>Java</li>
+                    </ul>
+                    <ul>
+                        <li>C++</li>
+                        <li>C</li>
+                        <li>Android Studio</li>
+                        <li>Git/Github</li>
+                    </ul>
+                </div>
+            </div>
+
+            <figure>
+                <img src="./assets/images/programming-lang.jpg" alt="Image of Vince Ermitano" width="400">
+            </figure>
+        </section>
+
+        <section id="experience-section">
+            <div class="skinny">
+                <h2>Experience</h2>
+                <ul>
+                    <li>Data Structures</li>
+                    <li>Algorithm Design and Analysis</li>
+                    <li>Operating System Principles</li>
+                    <li>Digital System Design</li>
+                    <li>Software Engineering</li>
+                </ul>
+            </div>
+
+            <figure>
+                <img src="./assets/images/experience-img.webp" alt="Image of Vince Ermitano" width="300">
+            </figure>
+            <hr />
+        </section>
+
+        <section class="flipped">
+            <div id="goals-and-interests">
+                <h2>Goals/Interests</h2>
+                <p>Currently, I am really interested in Web Development.
+                    Both the front-end and back-end are intriguing to me so I would
+                    like to explore more on each focus to see where I want to hone
+                    my skills in. Whichever path I take, I want to be able to make an
+                    impact on users' lives by building sites and apps that provide helpful
+                    and meaningful services. 
+                </p>
+            </div>
+
+            <figure>
+                <img src="./assets/images/interests.jpg" alt="Image of Vince Ermitano" width="300">
+            </figure>
+            <hr />
+        </section>
+
+        <section id="hobbies-section">
+            <div class="skinny">
+                <h2>Hobbies</h2>
+                <ul>
+                    <li>Photography</li>
+                    <li>Video Games</li>
+                    <li>Working Out</li>
+                    <li>Basketball</li>
+                </ul>
+            </div>
+
+            <figure>
+                <img src="./assets/images/hobbies.jpg" alt="Image of Vince Ermitano" width="300">
+            </figure>
+        </section>
+    </main>
+
+    <hr />
+
+    <footer>
+        <icon-group>
+            <i class="fa-brands fa-github" onclick="window.open('https://github.com/','_blank')"></i>
+            <i class="fa-brands fa-linkedin" onclick="window.open('https://github.com/','_blank')"></i>
+            <!-- <a href="https://github.com/vince-ermitano" target="_blank" title="Go to Vince's Github"><img src="./assets/images/github-png-icon-free-download-813498.png" alt="Link to Vince's Github" width="25"></a>
+            <a href="https://www.linkedin.com/in/vince-ermitano-014992223/" target="_blank" title="Go to Vince's LinkedIn"><img src="./assets/images/linkedin-icon.png" alt="Link to Vince's LinkedIn" width="25"></a> -->
+        </icon-group>
+    </footer>
+</body>
+</html>

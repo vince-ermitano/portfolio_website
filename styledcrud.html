@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Crud</title>
+    <script type="module" src="./styledblog.js"></script>
+    <link rel="stylesheet" href="./assets/css/myStyle.css" media="screen" type="text/css">
+    <script src="https://kit.fontawesome.com/8cc61868ab.js" crossorigin="anonymous" defer></script>
+    <style>
+        #blog-area {
+            margin: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            margin: 1rem;
+        }
+        h3 {
+            font-size: 1.75rem;
+        }
+
+        h4 {
+            font-size: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        main {
+            padding: 1rem;
+        }
+
+        button {
+            margin: 0 2rem;
+        }
+
+        #add-button {
+            margin: 1rem;
+            font-size: 1.5rem;
+            transition: var(--ease-in-transition);
+        }
+
+        #add-button:hover {
+            color: var(--bright-coral);
+            transform: scale(1.5);
+        }
+
+        .blog-post {
+            margin: 1rem;
+            min-width: 300px;
+            max-width: 500px;
+            background-color: var(--golden);
+            padding: 1rem 1rem;
+            border-radius: 15px 50px;
+            transition: var(--ease-in-transition);
+        }
+
+        .blog-post:hover {
+            background-color: rgba(249, 142, 2, 0.2);
+        }
+
+        .edit-button {
+            margin-right: 1rem;
+        }
+
+        .delete-button, .edit-button {
+            float: right;
+            font-size: 1.5rem;
+            transition: var(--ease-in-transition);
+        }
+
+        .delete-button:hover, .edit-button:hover {
+            color: var(--bright-coral);
+            transform: scale(1.2);
+        }
+
+        /* Form styles */
+        form input {
+            margin-bottom: 1rem;
+        }
+        form label, form input {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <figure>
+            <a href="index.html">
+                <img src="./assets/images/small-prof-pic.png" alt="Image of logo (click to go to homepage)" width="30">
+                <span>Vince Ermitano</span>
+            </a> 
+        </figure>
+
+        <nav class="desktop">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" title="Go to Projects Page">Projects</a></li>
+                <li class="forHW2"><a href="experimental.html" title="Go to Experimental Page">Experimental</a></li>
+                <li><a href="about.html" title="Go to About Page">About Me</a></li>
+                <li><a href="contact.html" title="Go to Contact Page">Contact</a></li>
+                <li><a href="nativedialogs.html" title="Go to Native Dialogs Page">Native Dialogs</a></li>
+                <li><a href="customdialogs.html" title="Go to Custom Dialogs Page">Custom Dialogs</a></li>
+                <li><a href="crud.html" title="Go to Simple CRUD Page">Simple CRUD</a></li>
+                <li><a href="styledcrud.html" title="Go to Styled CRUD Page">Styled CRUD</a></li>
+            </ul>
+        </nav>
+
+        <nav class="nav-mobile">
+            <!-- <input type="checkbox" name="" id="check" /> -->
+            <div id="menu">
+                <div id=bar1 class="bar"></div>
+                <div id=bar2 class="bar"></div>
+                <div id=bar3 class="bar"></div>
+            </div>
+            <!-- <div class="menu-bg">
+                <ul>
+                    <li><a href="index.html" title="Go to Homepage">Home</a></li>
+                    <li><a href="projects.html" title="Go to Projects Page">Projects</a></li>
+                    <li><a href="about.html" title="Go to About Page">About Me</a></li>
+                    <li><a href="contact.html" title="Go to Contact Page">Contact</a></li>
+                </ul>
+            </div> -->
+        </nav>
+    </header>
+    
+    <!-- Update with hamburger menu in JS iteration -->
+    <div id="menu-no-animation">
+        <ul>
+            <li><a href="index.html" title="Go to Homepage">Home</a></li>
+            <li><a href="projects.html" title="Go to Projects Page">Projects</a></li>
+            <li><a href="about.html" title="Go to About Page">About Me</a></li>
+            <li><a href="contact.html" title="Go to Contact Page">Contact</a></li>
+        </ul>
+    </div>
+
+    <main>
+
+        <dialog>
+            <form id="myForm" method="get">
+                <label for="titleFld">Post Title</label>
+                <input type="text" name="titleFld" id="titleFld" maxlength="50" required>
+                <label for="dateFld">Post Date</label>
+                <input type="date" name="dateFld" id="dateFld" required>
+                <label for="summaryFld">Post Summary</label>
+                <textarea name="summaryFld" id="summaryFld" cols="40" rows="10"></textarea>
+            </form>
+            <button id="cancel-button" type="button">Cancel</button>
+            <button id="send-button" type="submit" form="myForm">Create Post</button>
+        </dialog>
+
+        <h1>Blog</h1>
+        <i class="fa-solid fa-square-plus" id="add-button" title="Add post"></i>
+        <!-- <button id="add-button">Add Post</button> -->
+
+        <section>
+            <h2>Recent posts</h2>
+            <div id="blog-area"></div>
+        </section>
+    </main>
+
+    <footer>
+        <icon-group>
+            <a href="https://github.com/vince-ermitano" target="_blank" title="Go to Vince's Github"><img src="./assets/images/github-png-icon-free-download-813498.png" alt="Link to Vince's Github" width="25"></a>
+            <a href="https://www.linkedin.com/in/vince-ermitano-014992223/" target="_blank" title="Go to Vince's LinkedIn"><img src="./assets/images/linkedin-icon.png" alt="Link to Vince's LinkedIn" width="25"></a>
+        </icon-group>
+    </footer>
+</body>
+</html>

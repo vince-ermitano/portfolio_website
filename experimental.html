@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experimental | Vince Ermitano</title>
+    <link rel="stylesheet" href="./assets/css/myStyle.css" media="screen" type="text/css">
+    <!-- <link rel="stylesheet" href="./assets/css/experimental.css" media="screen" type="text/css"> -->
+
+    <style>
+        #test-img {
+            width: 80%;
+            height: 300px;
+            border: 1px dotted black;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        main {
+            text-align: center;
+        }
+
+        #test-img img{
+            width: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <figure>
+            <a href="index.html">
+                <img src="./assets/images/small-prof-pic.png" alt="Image of logo (click to go to homepage)" width="30">
+                <span>Vince Ermitano</span>
+            </a> 
+        </figure>
+
+        <nav class="desktop">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" title="Go to Projects Page">Projects</a></li>
+                <li><a href="experimental.html" title="Go to Experimental Page">Experimental</a></li>
+                <li><a href="about.html" title="Go to About Page">About Me</a></li>
+                <li><a href="contact.html" title="Go to Contact Page">Contact</a></li>
+            </ul>
+        </nav>
+
+        <nav class="nav-mobile">
+            <!-- <input type="checkbox" name="" id="check" /> -->
+            <div id="menu">
+                <div id=bar1 class="bar"></div>
+                <div id=bar2 class="bar"></div>
+                <div id=bar3 class="bar"></div>
+            </div>
+            <!-- <div class="menu-bg">
+                <ul>
+                    <li><a href="index.html" title="Go to Homepage">Home</a></li>
+                    <li><a href="projects.html" title="Go to Projects Page">Projects</a></li>
+                    <li><a href="about.html" title="Go to About Page">About Me</a></li>
+                    <li><a href="contact.html" title="Go to Contact Page">Contact</a></li>
+                </ul>
+            </div> -->
+        </nav>
+    </header>
+
+    <!-- Update with hamburger menu in JS iteration -->
+    <div id="menu-no-animation">
+        <ul>
+            <li><a href="index.html" title="Go to Homepage">Home</a></li>
+            <li><a href="projects.html" title="Go to Projects Page">Projects</a></li>
+            <li><a href="about.html" title="Go to About Page">About Me</a></li>
+            <li><a href="contact.html" title="Go to Contact Page">Contact</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <h1>TESTING AREA</h1>
+
+        <h2>Testing the h3 tag</h2>
+        <h3>This is a h3 tag which will has less importance than an h2 tag
+            and by default is smaller than the h2 and h1 tags
+        </h3>
+        <hr />
+
+        <aside>
+            <h2>Testing the aside element which represents a portion of a doc 
+                that has no relevance to main content
+            </h2>
+        </aside>
+        <hr />
+
+        <h2>Testing span element</h2>
+        <span>Each </span><span>word </span><span>in </span><span>it's </span>
+        <span>own </span><span>span </span><span> tag.</span>
+        <hr />
+
+        <h2>Testing i tag and em tag</h2>
+        <p>Which word got <i>italicized</i>?</p>
+        <p>'em' tag also <em>italicizes</em>?</p>
+
+        <h2>Testing code tag</h2>
+        <p>I can show that <code>img</code> is a HTML tag.</p>
+        <hr />
+
+        <h2>Testing pre tag</h2>
+        <pre>Professor P    O   W 
+            E LL  already s ho wcased this in l e c  t u   re.
+        </pre>
+        <hr />
+
+        <h2>Testing iframe</h2>
+        <iframe src="contact.html" height="200" width="200" title="contact page frame"></iframe>
+        <hr />
+
+        <h2>Testing audio tag</h2>
+        <audio controls>
+            <source src="./assets/audio/meme-de-creditos-finales.mp3" type="audio/mpeg">
+            Browser doesn't support this audio element.
+        </audio>
+        <hr />
+
+        <h2>Testing video tag</h2>
+        <video width="300" height="300" controls>
+            <source src="./assets/videos/XZRv0YyN.mp4" type="video/mp4">
+            Browser doesn't support this video element.
+        </video>
+        <hr />
+
+        <h2>Testing the canvas tag</h2>
+        <canvas id="testCanvas">Browser doesn't support canvas element</canvas>
+        <script>
+            var canvas = document.getElementById("testCanvas");
+            var ctx = canvas.getContext("2d");
+            ctx.beginPath();
+            ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+            ctx.stroke();
+        </script>
+        <hr />
+
+        <h2>Testin svg tag</h2>
+        <svg width="200" height="200">
+            <rect x="50" y="20" rx="20" ry="20" width="150" height="150"></rect>
+        </svg>
+        <hr />
+
+        <h2>Testing ol</h2>
+        <ol>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+        </ol>
+        <hr />
+
+        <h2>Testing select, optgroup, and option tags</h2>
+        <form>
+            <label for="dropdown">Choose an item</label>
+            <select name="dropdown" id="dropdown">
+                <optgroup label="fruits">
+                    <option value="apple">Apple</option>
+                    <option value="banana">Banana</option>
+                    <option value="mango">Mango</option>
+                </optgroup>
+                <optgroup label="veggies">
+                    <option value="broccoli">Broccoli</option>
+                    <option value="lettuce">Lettuce</option>
+                </optgroup>
+            </select>
+        </form>
+        <hr />
+
+        <h2>Testing fieldset and legend tags</h2>
+        <form>
+            <fieldset>
+                <legend>Personal details:</legend>
+                <label for="fullNameFld">Full Name</label>
+                <input type="text" name="fullNameFld" id="fullNameFld">
+                <label for="phoneFld">Phone #</label>
+                <input type="text" name="phoneFld" id="phoneFld">
+                <label for="ssnFld">SSN</label>
+                <input type="text" name="ssnFld" id="ssnFld">
+            </fieldset>
+        </form>
+        <hr />
+
+        <h2>Testing datalist tag</h2>
+        <form>
+            <label for="drink-choice">Choose a drink:</label>
+            <input list="drinks" id="drink-choice" name="drink-choice">
+            <datalist id="drinks">
+                <option value="Water"></option>
+                <option value="Soda"></option>
+                <option value="Juice"></option>
+                <option value="Smoothie"></option>
+            </datalist>
+        </form>
+        <hr />
+
+        <h2>Testing details and summary tags</h2>
+        <details>
+            <summary>Find some details here</summary>
+            <p>Here are the details that you wanted.</p>
+        </details>
+        <hr />
+
+        <h2>Testing template tag (content obviously hidden)</h2>
+        <template>
+            <p>I am inside a template and hidden.</p>
+        </template>
+        <hr />
+
+        <h2>Testing the table, tr, td, th, caption, col, colgroup tags</h2>
+        <table>
+            <caption>Useless Data</caption>
+            <colgroup>
+                <col span="3"/>
+            </colgroup>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Occuptation</th>
+            </tr>
+            <tr>
+                <td>Thomas Powell</td>
+                <td>Unknown</td>
+                <td>God</td>
+            </tr>
+            <tr>
+                <td>Vince Ermitano</td>
+                <td>24</td>
+                <td>Student</td>
+            </tr>
+            <tr>
+                <td>Lebron James</td>
+                <td>37</td>
+                <td>NBA Player</td>
+            </tr>
+        </table>
+        <p onmouseover="this.style.zoom='200%'"  
+       onmouseout="this.style.zoom='normal'">  
+        Roll your mouse over me and watch me zoom!</p> 
+    
+        <div id="test-img">
+            <img src="./assets/images/hobbies.jpg" alt="">
+        </div>
+    </main>
+
+    <hr />
+
+
+    <footer>
+        <icon-group>
+            <a href="https://github.com/vince-ermitano" target="_blank" title="Go to Vince's Github"><img src="./assets/images/github-png-icon-free-download-813498.png" alt="Link to Vince's Github" width="25"></a>
+            <a href="https://www.linkedin.com/in/vince-ermitano-014992223/" target="_blank" title="Go to Vince's LinkedIn"><img src="./assets/images/linkedin-icon.png" alt="Link to Vince's LinkedIn" width="25"></a>
+        </icon-group>
+    </footer>
+</body>
+</html>
