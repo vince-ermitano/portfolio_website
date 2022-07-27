@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/css/myStyle.css" media="screen" type="text/css">
     <!-- <link rel="stylesheet" href="./assets/css/index.css"> -->
     <script src="https://kit.fontawesome.com/8cc61868ab.js" crossorigin="anonymous" defer></script>
+    <script src="./assets/js/hamburger-menu.js"></script>
     <link rel="icon" href="./assets/images/icons8-homepage-16.png">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
@@ -298,7 +299,7 @@
         </nav>
 
 
-        <nav class="nav-mobile">
+        <nav class="nav-mobile" data-hamburger-clicked="false">
             <!-- <input type="checkbox" name="" id="check" /> -->
             <div id="menu">
                 <div id=bar1 class="bar"></div>
@@ -315,7 +316,7 @@
             </div> -->
         </nav>
     </header>
-    <div id="menu-no-animation">
+    <div id="menu-no-animation" style="display: none">
         <ul>
             <li><a href="index.html" title="Go to Homepage">Home</a></li>
             <li><a href="projects.html" title="Go to Projects Page">Projects</a></li>

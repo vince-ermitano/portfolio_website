@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         customDialog.close('SENT');
         alert('Your input data was sent!');
 
-        document.querySelector('pre').innerHTML = `Inputs of form:
+        document.querySelector('pre').textContent = `Inputs of form:
         Name = ${name}
         PID = ${pid}
         SSN = ${ssn}

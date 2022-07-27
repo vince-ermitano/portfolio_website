@@ -8,18 +8,23 @@
     <link rel="stylesheet" href="./assets/css/myStyle.css" media="screen" type="text/css">
     <script src="https://kit.fontawesome.com/8cc61868ab.js" crossorigin="anonymous" defer></script>
     <link rel="icon" href="./assets/images/icons8-about-me-male-32.png">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="./assets/js/hamburger-menu.js"></script>
 
     <style>
         /* General styles */
+        body {
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+        /* body {
+            overflow-x: hidden;
+        } */
+
         main section {
             display: grid;
             grid-template: 1fr / 1fr 1fr;
             padding: 2rem 1rem;
-        }
-
-        body {
-            margin: 0;
             overflow-x: hidden;
         }
 
@@ -295,7 +300,7 @@
     </header>
 
     <!-- Update with hamburger menu in JS iteration -->
-    <div id="menu-no-animation">
+    <div id="menu-no-animation" style="display: none">
         <ul>
             <li><a href="index.html" title="Go to Homepage">Home</a></li>
             <li><a href="projects.html" title="Go to Projects Page">Projects</a></li>
@@ -407,7 +412,7 @@
         </icon-group>
     </footer>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
             // Global settings:
@@ -424,7 +429,7 @@
             // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
             offset: 300, // offset (in px) from the original trigger point
             delay: 50, // values from 0 to 3000, with step 50ms
-            duration: 1000, // values from 0 to 3000, with step 50ms
+            duration: 1700, // values from 0 to 3000, with step 50ms
             easing: 'ease-in-out', // default easing for AOS animations
             once: false, // whether animation should happen only once - while scrolling down
             mirror: true, // whether elements should animate out while scrolling past them

@@ -72,6 +72,7 @@ html, body {
  }
 
 :root {
+    scroll-behavior: smooth;
     font-family: 'Poppins', 'Calibri', sans-serif;
     --sky: #7cdbd5;
     --bright-coral: #f53240;
@@ -133,8 +134,9 @@ header > nav {
     grid-template-columns: repeat(5, 1fr);
     justify-items: center;
 } */
-header > nav ul {
+header > nav.desktop ul {
     display: flex;
+    flex-wrap: wrap;
 }
 
 header ul > li {
@@ -269,6 +271,10 @@ footer i:hover {
     transition: var(--ease-in-transition);
   }
 
+  #bar2 {
+    transition: var(--ease-in-transition);
+  }
+
   #bar3 {
     transform: translateY(4px);
     transition: var(--ease-in-transition);
@@ -292,19 +298,6 @@ footer i:hover {
     width: 100%;
     height: 100%;
     display: block;
-  }
-
-  #menu:hover #bar1 {
-    transform: translateY(4px) rotate(-45deg);
-  }
-
-  #menu:hover #bar3 {
-    transform: translateY(-6px) rotate(45deg);
-  }
-
-  #menu:hover #bar2 {
-    opacity: 0;
-    transition: var(--ease-in-transition);
   }
 
   .nav-mobile ul {
