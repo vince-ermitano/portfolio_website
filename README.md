@@ -1,7 +1,6 @@
-# Vince Ermitano
-## A14001294
-### https://rococo-dragon-e70ee2.netlify.app
+# Welcome to my Porfolio Website!
 
-(The associated parts of the homework assignment are available via the nav bar
-at the top of the website)
+Come and see a continuously updating site where I share a little bit about me and some work I have done relating to Computer Science!
+https://rococo-dragon-e70ee2.netlify.app
+
 
